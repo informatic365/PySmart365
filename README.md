@@ -17,8 +17,6 @@ Please install the following python modules:
 pip install --upgrade customtkinter
 
 ```
-<<<<<<< HEAD
+
 
 © Copyright 2023 Informatic365 - SmartSoft - MicroSoftware
-=======
->>>>>>> e160efb5855b269bf104477dcd2909a155875bc3
