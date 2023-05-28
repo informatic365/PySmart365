@@ -1,6 +1,9 @@
 AUTHOR = 'Runkang'
 COPYRIGHT = '© Copyright 2023 Informatic365 - SmartSoft - MicroSoftware'
 
+class main():
+    print("Welcome to pysmart365 0.0.3")
+
 import subprocess
 import platform
 from customtkinter import *
@@ -48,3 +51,13 @@ def turn_off_with_gui():
         shutdowngui.mainloop()
     else:
         subprocess.run(['slidetoshutdown'])
+def copyright_view(year, company):
+    '''
+    Enter the copyright text that will be displayed with the name that you can customize and the year using the attribute 'company' for the name and 'year' for the year.
+    Example if i write copyright_view(year='2022 - 2023', company= 'Informatic365')
+    then displays "© Copyright 2022 - 2023 Informatic365".
+    '''
+    get = f'© Copyright {year} {company}'
+    return get
+if __name__ == '__main__':
+    main()
