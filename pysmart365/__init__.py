@@ -8,6 +8,7 @@ import subprocess
 import platform
 from customtkinter import *
 from tkinter import messagebox
+import sys
 
 def turn_off(time):
     '''
@@ -59,5 +60,7 @@ def copyright_view(year, company):
     '''
     get = f'© Copyright {year} {company}'
     return get
+class close():
+    sys.exit()
 if __name__ == '__main__':
     main()
