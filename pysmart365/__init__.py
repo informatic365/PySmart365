@@ -1,9 +1,6 @@
 AUTHOR = 'Runkang'
 COPYRIGHT = '© Copyright 2023 Informatic365 - SmartSoft - MicroSoftware'
 
-class main():
-    print("Welcome to pysmart365 0.0.3")
-
 import subprocess
 import platform
 from customtkinter import *
@@ -60,7 +57,5 @@ def copyright_view(year, company):
     '''
     get = f'© Copyright {year} {company}'
     return get
-class close():
+def close():
     sys.exit()
-if __name__ == '__main__':
-    main()
