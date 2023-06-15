@@ -4,7 +4,7 @@ setup(
     author_email="informatic3650@gmail.com",
     name="pysmart365",
     packages=['pysmart365'],
-    version='0.0.6',
+    version='0.0.8',
     long_description='''This module is to simplify the functions of MicroSoftware and SmartSoft.''',
     description='This module is to simplify the functions of MicroSoftware and SmartSoft.',
     install_requires=[
@@ -16,6 +16,10 @@ setup(
         'firebase_admin',
         'customtkinter',
         'requests',
+        'flask',
+        'ttkbootstrap',
+        'configparse',
+        'pywinauto'
         ],
     url="https://github.com/informatic365/PySmart365/"
 )

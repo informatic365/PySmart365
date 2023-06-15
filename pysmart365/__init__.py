@@ -7,7 +7,7 @@ from customtkinter import *
 from tkinter import messagebox
 import sys
 
-def turn_off(time):
+def turn_off(time: float) -> None:
     '''
     Shutdown pc directly without gui graphics.
     '''
@@ -15,7 +15,7 @@ def turn_off(time):
         subprocess.run(['shutdown', '-s', '-t', '0'])
     else:
         subprocess.run(['shutdown', '-s', '-t', f'{time}'])
-def restart(time):
+def restart(time: float) -> None:
     '''
     Restart pc with or without time
     '''
@@ -23,7 +23,7 @@ def restart(time):
         subprocess.run(['shutdown', '-r', '-t', '0'])
     else:
         subprocess.run(['shutdown', '-r', '-t', f'{time}'])
-def restart_with_advancedmode(time):
+def restart_with_advancedmode(time: float) -> None:
     '''
     Restart pc to advanced mode available on WIndows 10 and 11 or successive version.
     '''
@@ -37,16 +37,7 @@ def turn_off_with_gui():
     '''
     check_windows_version = platform.win32_ver()[0]
     if check_windows_version == '7' or '8':
-        shutdowngui = CTk()
-        width = 200
-        height = 100
-        x = (shutdowngui.winfo_screenwidth() - width) // 2
-        y = (shutdowngui.winfo_screenheight() - height) // 2
-        shutdowngui.geometry(f"{width}x{height}+{x}+{y}")
-        shutdowngui.title("Turn Off pc in gui mode")
-        shutdown = CTkButton(shutdowngui, text="Turn Off", command=lambda: turn_off(time=0))
-        shutdown.place(relx=0.5, rely=0.5, anchor='center')
-        shutdowngui.mainloop()
+        pass
     else:
         subprocess.run(['slidetoshutdown'])
 def copyright_view(year, company):
@@ -57,5 +48,6 @@ def copyright_view(year, company):
     '''
     get = f'© Copyright {year} {company}'
     return get
-def close():
-    sys.exit()
+class close():
+    def __init__(self) -> None:
+        sys.exit()
