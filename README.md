@@ -11,12 +11,10 @@ pip install --upgrade pysmart365
 
 ```
 Remember that to install the `pysmart365` module you need to install the latest python version or python versions starting from python3.
-# Requirements
-Please install the following python modules:
-``` Python
-pip install --upgrade customtkinter
-
-```
+# Last version:
+The last version is `0.0.8`
+# Documentation
+Working in progress...
 
 
 © Copyright 2023 Informatic365 - SmartSoft - MicroSoftware
