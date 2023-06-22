@@ -12,7 +12,7 @@ pip install --upgrade pysmart365
 ```
 Remember that to install the `pysmart365` module you need to install the latest python version or python versions starting from python3.
 # Last version:
-The last version is `0.0.8`
+The last version is `0.0.9`
 # Documentation
 Working in progress...
 
