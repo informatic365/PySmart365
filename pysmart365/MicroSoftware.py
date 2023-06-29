@@ -14,28 +14,14 @@ def view_date():
     view_date = datetime.now().strftime("%d/%m/%Y")
     return view_date
 
-def sleep(delay):
+def sleep(delay: str) -> None:
     if delay == '0' or delay is None:
         time.sleep(0)
     elif delay:
         time.sleep(delay)
-    else:
-        print("Error")
-
-class center_screen():
-    def __init__(self, width: int = None, height: int = None):
-        screen_width = Tk().winfo_screenwidth()
-        screen_height = Tk().winfo_screenheight()
-        x = (screen_width - width) // 2
-        y = (screen_height - height) // 2
-        self.geometry = f"{width}x{height}+{x}+{y}"
-
-class EXIT():
-    def __init__(self):
-        sys.exit()
 
 class wintools():
-    def mrt(self, secs: float) -> None:
+    def mrt() -> None:
         if os.path.exists(r"C:\Windows\System32\mrt.exe"):
             pyautogui.hotkey("winleft", "r")
             pyautogui.typewrite("mrt.exe")
@@ -44,54 +30,55 @@ class wintools():
         else:
             messagebox.showerror("Error not found", f"Program `mrt.exe` not found.")
 
-    def diskmgmt(self, secs: float) -> None:
+    def diskmgmt() -> None:
         pyautogui.hotkey("winleft", "r")
         pyautogui.typewrite("diskmgmt.msc")
-        sleep(secs)
+        sleep(0.5)
         pyautogui.press("Enter")
 
-    def computermgmt(self, secs: float) -> None:
+    def computermgmt() -> None:
         pyautogui.hotkey("winleft", "r")
         pyautogui.typewrite("compmgmt.msc")
-        sleep(secs)
+        sleep(0.5)
         pyautogui.press("Enter")
 
-    def notepad(self, secs: float) -> None:
+    def notepad() -> None:
         pyautogui.hotkey("winleft", "r")
         pyautogui.typewrite("notepad.exe")
-        sleep(secs)
+        sleep(0.5)
         pyautogui.press("Enter")
 
-    def calculator(self, secs: float) -> None:
+    def calculator() -> None:
         pyautogui.hotkey("winleft", "r")
         pyautogui.typewrite("calc.exe")
-        sleep(secs)
+        sleep(0.5)
         pyautogui.press("Enter")
 
-    def paint(self, secs: float) -> None:
+    def paint() -> None:
         pyautogui.hotkey("winleft", "r")
         pyautogui.typewrite("mspaint.exe")
-        sleep(secs)
-
-    def taskmgr(self) -> None:
-        pyautogui.hotkey("ctrl", "shift", "esc")
-
-    def explorer(self) -> None:
-        pyautogui.hotkey("winleft", "e")
-
-    def cmd(self, secs: float) -> None:
-        pyautogui.hotkey("winleft", "r")
-        pyautogui.typewrite("cmd.exe")
-        sleep(secs)
+        sleep(0.5)
         pyautogui.press("Enter")
 
-    def settings(self, secs: float) -> None:
+    def taskmgr() -> None:
+        pyautogui.hotkey("ctrl", "shift", "esc")
+
+    def explorer() -> None:
+        pyautogui.hotkey("winleft", "e")
+
+    def cmd() -> None:
+        pyautogui.hotkey("winleft", "r")
+        pyautogui.typewrite("cmd.exe")
+        sleep()
+        pyautogui.press("Enter")
+
+    def settings() -> None:
         pyautogui.hotkey("winleft", "r")
         pyautogui.typewrite("ms-settings:")
         sleep(0.5)
         pyautogui.press("Enter")
 
-    def ms_store(self, secs: float) -> None:
+    def ms_store() -> None:
         def check_microsoft_store():
             try:
                 app = Application(backend='uia').start("ms-windows-store://")
@@ -110,5 +97,10 @@ class wintools():
     def runner(command) -> None:
         pyautogui.hotkey("winleft", "r")
         pyautogui.typewrite(command)
+        time.sleep(0.5)
+        pyautogui.press("Enter")
+    def clenmgr():
+        pyautogui.hotkey("Winleft", "r")
+        pyautogui.typewrite("cleanmgr")
         time.sleep(0.5)
         pyautogui.press("Enter")

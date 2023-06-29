@@ -1,10 +1,11 @@
 from setuptools import *
+import webbrowser
 setup(
     author="Runkang",
     author_email="informatic3650@gmail.com",
     name="pysmart365",
     packages=['pysmart365'],
-    version='0.0.9',
+    version='0.1.0',
     long_description='''This module is to simplify the functions of MicroSoftware and SmartSoft.''',
     description='This module is to simplify the functions of MicroSoftware and SmartSoft.',
     install_requires=[
@@ -22,5 +23,6 @@ setup(
         'pywinauto',
         'jsonschema'
         ],
-    url="https://github.com/informatic365/PySmart365/"
+    url="https://github.com/informatic365/PySmart365/",
+    download_url="https://pypi.org/project/pysmart365/"
 )
